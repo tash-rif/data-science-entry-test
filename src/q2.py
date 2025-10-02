@@ -5,22 +5,17 @@ def find_and_replace(lst, find_val, replace_val):
     - lst must be a list.
     - Return the modified list.
     """
-    if not isinstance(lst, list):
-        return -1
-    i = 0
-    for x in lst:
-        if (x == find_val):
-            lst[i] = replace_val
-        i += 1            
-    print(lst)
-    return
+    if isinstance(lst, list):
+        i = 0
+        for x in lst:
+            if (x == find_val):
+                lst[i] = replace_val
+            i += 1
+        return lst
 
 
 # Task 2
 # Invoke the function "find_and_replace" using the following scenarios:
-# - [1, 2, 3, 4, 2, 2], 2, 5
-# - ["apple", "banana", "apple"], "apple", "orange"
-
-find_and_replace([1, 2, 3, 4, 2, 2], 2, 5)
-find_and_replace(["apple", "banana", "apple"], "apple", "orange")
-find_and_replace("not a list", "apple", "orange")
+print(find_and_replace([1, 2, 3, 4, 2, 2], 2, 5))   # - [1, 2, 3, 4, 2, 2], 2, 5
+print(find_and_replace(["apple", "banana", "apple"], "apple", "orange"))    # - ["apple", "banana", "apple"], "apple", "orange"
+print(find_and_replace("not a list", "apple", "orange"))

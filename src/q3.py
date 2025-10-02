@@ -9,10 +9,9 @@ def update_dictionary(dct, key, value):
         if key in dct:
             print("Original value:", dct[key])
         dct[key] = value
-        #print(dct)
         return dct
 
 # Task 2
 # Invoke the function "update_dictionary" using the following scenarios:
-update_dictionary({}, "name", "Alice") # - {}, "name", "Alice"
-update_dictionary({"age": 25}, "age", 26) # - {"age": 25}, "age", 26
+print(update_dictionary({}, "name", "Alice"))       # - {}, "name", "Alice"
+print(update_dictionary({"age": 25}, "age", 26))    # - {"age": 25}, "age", 26
